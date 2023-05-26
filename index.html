@@ -62,6 +62,7 @@
     .d {
       border: 0.4em inset rgb(236, 180, 181);
     }
+
     .navbar-nav li a:hover {
       color: #1abc9c !important;
     }
@@ -102,38 +103,48 @@
       color: rgb(0, 0, 0);
     }
 
-    .topnav.responsive {
-      position: relative;
-    }
+    @media screen and (max-width: 600px) {
+      .topnav a:not(:first-child),
 
-    .topnav.responsive .icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
 
-    .topnav.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
+      .topnav.responsive {
+        position: relative;
+      }
 
-    .topnav.responsive .dropdown {
-      float: none;
-    }
+      .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
 
-    .topnav.responsive .dropdown-content {
-      position: relative;
-    }
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
 
-    .topnav.responsive .dropdown .dropbtn {
-      display: block;
-      width: 100%;
-      text-align: left;
+      .topnav.responsive .dropdown {
+        float: none;
+      }
+
+      .topnav.responsive .dropdown-content {
+        position: relative;
+      }
+
+      .topnav.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+      }
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: Arial;
+      margin-top: 0;
     }
 
     input[type=text],
@@ -177,7 +188,7 @@
 
     .container {
       padding: 16px;
-      width:auto;
+      width: auto;
     }
 
     span.psw {
@@ -272,45 +283,6 @@
       }
     }
   </style>
-</head>
-
-<body>
-  <div class="topnav" id="myTopnav">
-    <a
-      href="https://shh3020.github.io/"><img
-        src="10.png" width="200" height="70"></a>
-    <a href="https://seoultechjisuhwang.github.io/">회사소개</a>
-    <a href="https://himdula.github.io/">서비스소개</a>
-    <a href="https://grjkgfuy2.github.io/">배토페이</a>
-    <a href="https://ewruiofsd.github.io/#%EC%A0%9C%ED%9C%B4%EC%97%85%EC%B2%B4%20%EC%95%88%EB%82%B4">제휴업체 안내</a>
-    <div class="#로그인">
-      <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-    </div>
-    <div id="id01" class="modal">
-      <form class="modal-content animate" action="/action_page.php" method="post">
-        <div class="imgcontainer">
-          <span onclick="document.getElementById('id01').style.display='none'" class="close"
-            title="Close Modal">&times;</span>
-          <img src="05.jpg" style="width: 20%;" alt="토끼">
-        </div>
-        <div class="container" style="">
-          <label for="uname"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" required>
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
-          <button type="submit">Login</button>
-          <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
-          </label>
-        </div>
-        <div class="container" style="background-color:#f1f1f1">
-          <button type="button" onclick="document.getElementById('id01').style.display='none'"
-            class="cancelbtn">Cancel</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
   <script>
     // Get the modal
     var modal = document.getElementById('id01');
@@ -342,6 +314,43 @@
       }
     }
   </script>
+</head>
+
+<body>
+  <div class="topnav" id="myTopnav">
+    <a href="https://shh3020.github.io/"><img src="10.png" width="200" height="70"></a>
+    <a href="https://seoultechjisuhwang.github.io/">회사소개</a>
+    <a href="https://himdula.github.io/">서비스소개</a>
+    <a href="https://grjkgfuy2.github.io/">배토페이</a>
+    <a href="https://ewruiofsd.github.io/#%EC%A0%9C%ED%9C%B4%EC%97%85%EC%B2%B4%20%EC%95%88%EB%82%B4">제휴업체 안내</a>
+    <div class="#로그인">
+      <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+    </div>
+    <div id="id01" class="modal">
+      <form class="modal-content animate" action="/action_page.php" method="post">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+          <img src="05.jpg" style="width: 20%;" alt="토끼">
+        </div>
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+          <button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'"
+            class="cancelbtn">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <div class="container-fluid bg-1 text-center">
     <img src="05.jpg" width="25%" style="right: 900px" id="bbb">
     <img src="06.png" width="50%" style="float:right;">
